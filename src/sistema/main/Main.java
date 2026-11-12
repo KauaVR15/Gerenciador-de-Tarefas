@@ -29,6 +29,7 @@ public class Main {
 
                     System.out.println("Digite o titulo da tarefa: ");
                     String titulo = scan.nextLine();
+                    System.out.println("Digite a descrição da tarefa: ");
                     String descricao = scan.nextLine();
 
                     gerenciador.adicionarTarefa(titulo, descricao);
