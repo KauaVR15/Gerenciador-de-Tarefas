@@ -35,6 +35,36 @@ public class Main {
                     gerenciador.adicionarTarefa(titulo, descricao);
 
                     break;
+
+                case 2:
+
+                    gerenciador.listarTodasTarefas();
+                    break;
+
+                case 3:
+
+                    gerenciador.listarTarefaPendente();
+                    break;
+
+                case 4:
+
+                    gerenciador.listarTarefaPendente();
+                    System.out.println("|Digite o ID da tarefa que deseja concluir: ");
+
+                    try{
+                        int idConcluir = scan.nextInt();
+                        scan.nextLine();
+                        gerenciador.concluirTarefa(idConcluir);
+                    }catch(InputMismatchException e){
+                        System.out.println("ERRO! Digite apenas números válidos para o ID!");
+                        scan.nextLine();
+                    }
+
+                    break;
+
+                case 0:
+                    rodando = false;
+                    break;
             }
 
         }
