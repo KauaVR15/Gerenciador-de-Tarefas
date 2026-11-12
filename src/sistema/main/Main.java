@@ -18,7 +18,7 @@ public class Main {
 
             System.out.println(" ------Gerenciador de Tarefas ------ ");
             System.out.println("|1. Adicionar nova tarefa \n|2. Listar todas as tarefas \n|3. Listar apenas pendente" +
-                                "\n4. Marcar tarefa como concluída \n5. Remover tarefa \n0. Sair");
+                                "\n|4. Marcar tarefa como concluída \n|5. Remover tarefa \n|0. Sair");
 
             int opcao = scan.nextInt();
             scan.nextLine();
