@@ -27,6 +27,7 @@ public class Main {
 
                 case 1:
 
+                    System.out.println("Digite o titulo da tarefa: ");
                     String titulo = scan.nextLine();
                     String descricao = scan.nextLine();
 
