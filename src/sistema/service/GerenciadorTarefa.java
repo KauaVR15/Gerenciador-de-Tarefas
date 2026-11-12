@@ -53,4 +53,24 @@ public class GerenciadorTarefa {
         }
 
     }
+
+    public void concluirTarefa(int id){
+        for(Tarefa tarefa : tarefas){
+            if(tarefa.getId() == id){
+                if(tarefa.isConcluida()){
+                    System.out.println("Esta tarefa já está concluída!");
+                }
+                else{
+                    tarefa.marcarComoConcluida();
+                    System.out.println("Parabens! Você concluiu sua tarefa com sucesso!");
+                }
+                return;
+            }
+        }
+
+        System.out.println("Nenhuma tarefa encontrada com o ID fornecido!");
+    }
+
+
+
 }
