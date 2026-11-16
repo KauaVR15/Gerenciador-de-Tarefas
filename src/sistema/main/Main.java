@@ -67,7 +67,9 @@ public class Main {
 
                 case 5:
 
-                    gerenciador.listarTodasTarefas();
+                    if(!gerenciador.listarTodasTarefas()){
+                        break;
+                    }
                     System.out.println("|Digite o ID da tarefa que deseja remover: ");
 
                     try{
