@@ -22,7 +22,7 @@ public class GerenciadorTarefa {
 
     }
 
-    public void listarTodasTarefas(){
+    public boolean listarTodasTarefas(){
         if(tarefas.isEmpty()){
             System.out.println("Parabens! Você não tem nenhuma tarefa no momento!");
             return false;
