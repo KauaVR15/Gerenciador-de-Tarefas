@@ -71,6 +71,9 @@ public class GerenciadorTarefa {
         System.out.println("Nenhuma tarefa encontrada com o ID fornecido!");
     }
 
-
+    public void removerTarefa(int id){
+        tarefas.removeIf(tarefa -> tarefa.getId() == id);
+        System.out.println("Tarefa removida com sucesso!");
+    }
 
 }
