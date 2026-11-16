@@ -2,6 +2,7 @@ package sistema.service;
 
 import java.util.*;
 
+import sistema.tarefas.Prioridade;
 import sistema.tarefas.Tarefa;
 
 import java.util.ArrayList;
