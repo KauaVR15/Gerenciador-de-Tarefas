@@ -49,6 +49,7 @@ public class GerenciadorTarefa {
 
         if(!temPendente){
             System.out.println("Nenhuma tarefa pendente no momento!");
+            return false;
         }
         return true;
     }
