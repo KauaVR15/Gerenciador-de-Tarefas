@@ -63,6 +63,22 @@ public class Main {
 
                     break;
 
+                case 5:
+
+                    gerenciador.listarTodasTarefas();
+                    System.out.println("|Digite o ID da tarefa que deseja remover: ");
+
+                    try{
+                        int idRemover = scan.nextInt();
+                        scan.nextLine();
+                        gerenciador.removerTarefa(idRemover);
+                    }catch(InputMismatchException e){
+                        System.out.println("ERRO! Digite apenas números válidos para o ID!");
+                        scan.nextLine();
+                    }
+
+                    break;
+
                 case 0:
                     rodando = false;
                     break;
