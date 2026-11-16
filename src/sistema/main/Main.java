@@ -49,7 +49,9 @@ public class Main {
 
                 case 4:
 
-                    gerenciador.listarTarefaPendente();
+                    if(!gerenciador.listarTarefaPendente()){
+                        break;
+                    }
                     System.out.println("|Digite o ID da tarefa que deseja concluir: ");
 
                     try{
