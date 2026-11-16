@@ -79,6 +79,31 @@ public class Main {
 
                     break;
 
+                case 6:
+
+                    if(!gerenciador.listarTodasTarefas()){
+                        break;
+                    }
+                    System.out.println("|Digite o ID da tarefa que deseja adicionar prioridade: ");
+
+                    try{
+                        int idPrioridade = scan.nextInt();
+                        scan.nextLine();
+                        System.out.println("""
+                                |Escolha: 
+                                |1. Baixa\s
+                                |2. Media\s
+                                |3. Alta""");
+                        int escolha = scan.nextInt();
+                        scan.nextLine();
+                        gerenciador.adicionarPrioridade(idPrioridade, escolha);
+                    }catch(InputMismatchException e){
+                        System.out.println("ERRO! Digite apenas números válidos para o ID!");
+                        scan.nextLine();
+                    }
+
+                    break;
+
                 case 0:
                     rodando = false;
                     break;
