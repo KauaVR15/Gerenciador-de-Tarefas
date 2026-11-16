@@ -43,6 +43,8 @@ public class GerenciadorTarefa {
         for(Tarefa tarefa : tarefas){
             if(!tarefa.isConcluida()){
                 System.out.println(tarefa);
+                System.out.println("|Descrição: "  + tarefa.getDescricao());
+                System.out.println("|Prioridade: "  + tarefa.getPrioridade());
                 temPendente = true;
             }
         }
