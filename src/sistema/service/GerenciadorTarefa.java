@@ -1,8 +1,7 @@
 package sistema.service;
 
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 import sistema.tarefas.Tarefa;
 
 import java.util.ArrayList;
