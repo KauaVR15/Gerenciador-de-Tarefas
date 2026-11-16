@@ -32,7 +32,7 @@ public class GerenciadorTarefa {
         for(Tarefa tarefa : tarefas){
             System.out.println(tarefa);
         }
-
+        return true;
     }
 
     public boolean listarTarefaPendente(){
