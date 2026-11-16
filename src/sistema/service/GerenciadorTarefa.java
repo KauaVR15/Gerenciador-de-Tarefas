@@ -35,7 +35,7 @@ public class GerenciadorTarefa {
 
     }
 
-    public void listarTarefaPendente(){
+    public boolean listarTarefaPendente(){
         boolean temPendente = false;
 
         System.out.println("Tarefas Pendentes");
