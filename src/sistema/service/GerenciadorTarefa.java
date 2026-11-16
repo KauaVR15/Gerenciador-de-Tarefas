@@ -31,6 +31,9 @@ public class GerenciadorTarefa {
         System.out.println("Todas as tarefas");
         for(Tarefa tarefa : tarefas){
             System.out.println(tarefa);
+            System.out.println("|Descrição: "  + tarefa.getDescricao());
+            System.out.println("|Prioridade: "  + tarefa.getPrioridade());
+
         }
         return true;
     }
