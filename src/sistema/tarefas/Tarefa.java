@@ -21,6 +21,19 @@ public class Tarefa {
         this.concluida = false;
     }
 
+    public Tarefa(int id, String titulo, String descricao, boolean concluida, Prioridade prioridade){
+        this.id = id;
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.concluida = concluida;
+        this.prioridade = prioridade;
+
+        if(id >= contadorId){
+            contadorId = id + 1;
+        }
+
+    }
+
     public int getId() {
         return id;
     }
