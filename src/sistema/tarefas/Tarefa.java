@@ -76,4 +76,8 @@ public class Tarefa {
         return status + " " + this.id + " - " + this.titulo;
     }
 
+    public String toCsv(){
+        return id + ";" + titulo + ";" + descricao + ";" + concluida + ";" + prioridade.toString();
+    }
+
 }
