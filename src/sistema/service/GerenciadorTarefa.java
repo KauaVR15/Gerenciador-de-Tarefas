@@ -137,34 +137,30 @@ public class GerenciadorTarefa {
         System.out.println("Tarefa removida com sucesso!");
     }
 
-    public void adicionarPrioridade(int id, int escolha){
-
-         for(Tarefa tarefa : tarefas){
-             if(tarefa.getId() == id){
-
-                 switch(escolha){
-
-                     case 1:
-                         tarefa.setPrioridade(Prioridade.Baixa);
-                         System.out.println("Prioridade baixa adicionada com sucesso!");
-                         break;
-
-                     case 2:
-
-                         tarefa.setPrioridade(Prioridade.Media);
-                         System.out.println("Prioridade media adicionada com sucesso!");
-                         break;
-
-                     case 3:
-                         tarefa.setPrioridade(Prioridade.Alta);
-                         System.out.println("Prioridade alta adicionada com sucesso!");
-                         break;
-                 }
-             }
-             else{
-                 System.out.println("Nenhuma tarefa encontrada com o ID fornecido!");
-             }
-         }
+    public void adicionarPrioridade(int id, int escolha) {
+        for (Tarefa tarefa : tarefas) {
+            if (tarefa.getId() == id) {
+                switch (escolha) {
+                    case 1:
+                        tarefa.setPrioridade(Prioridade.Baixa);
+                        System.out.println("Prioridade baixa adicionada com sucesso!");
+                        break;
+                    case 2:
+                        tarefa.setPrioridade(Prioridade.Media);
+                        System.out.println("Prioridade media adicionada com sucesso!");
+                        break;
+                    case 3:
+                        tarefa.setPrioridade(Prioridade.Alta);
+                        System.out.println("Prioridade alta adicionada com sucesso!");
+                        break;
+                    default:
+                        System.out.println("Opção de prioridade inválida!");
+                        return;
+                }
+                return;
+            }
+        }
+        System.out.println("Nenhuma tarefa encontrada com o ID fornecido!");
     }
 
 }
