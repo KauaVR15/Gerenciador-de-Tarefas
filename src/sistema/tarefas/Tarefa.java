@@ -7,6 +7,7 @@ public class Tarefa {
     private int id;
     private String titulo;
     private String descricao;
+    private Prioridade prioridade;
     boolean concluida = false;
 
     public Tarefa(){}
