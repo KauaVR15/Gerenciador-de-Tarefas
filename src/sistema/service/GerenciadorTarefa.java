@@ -34,6 +34,50 @@ public class GerenciadorTarefa {
 
     }
 
+    public void salvarCsv(){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(ARQUIVO_CSV))) {
+
+            writer.write("id;titulo;descricao;concluida;prioridade");
+            writer.newLine();
+
+            for (Tarefa tarefa : tarefas) {
+                writer.write(tarefa.toCsv());
+                writer.newLine();
+            }
+            System.out.println("Tarefas salvas em " + ARQUIVO_CSV);
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar arquivo CSV: " + e.getMessage());
+        }
+    }
+
+    public void carregarCsv() {
+        File arquivo = new File(ARQUIVO_CSV);
+
+        if (!arquivo.exists()) {
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(arquivo))) {
+            String linha = reader.readLine();
+
+            while ((linha = reader.readLine()) != null) {
+                if (linha.isBlank()) continue;
+
+                String[] dados = linha.split(";", -1);
+                int id = Integer.parseInt(dados[0]);
+                String titulo = dados[1];
+                String descricao = dados[2];
+                boolean concluida = Boolean.parseBoolean(dados[3]);
+                Prioridade prioridade = Prioridade.valueOf(dados[4]);
+
+                Tarefa tarefaCarregada = new Tarefa(id, titulo, descricao, concluida, prioridade);
+                tarefas.add(tarefaCarregada);
+            }
+        } catch (IOException | IllegalArgumentException e) {
+            System.out.println("Erro ao carregar arquivo CSV: " + e.getMessage());
+        }
+    }
+
     public boolean listarTodasTarefas(){
         if(tarefas.isEmpty()){
             System.out.println("Parabens! Você não tem nenhuma tarefa no momento!");
