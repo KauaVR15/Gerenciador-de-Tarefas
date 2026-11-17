@@ -115,6 +115,7 @@ public class Main {
                     break;
 
                 case 0:
+                    gerenciador.salvarCsv();
                     rodando = false;
                     break;
             }
