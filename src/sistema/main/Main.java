@@ -117,6 +117,7 @@ public class Main {
                 case 0:
                     gerenciador.salvarCsv();
                     rodando = false;
+                    System.out.println("Saindo.");
                     break;
             }
 
