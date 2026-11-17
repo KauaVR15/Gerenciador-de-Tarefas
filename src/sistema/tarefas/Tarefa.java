@@ -17,6 +17,7 @@ public class Tarefa {
         this.id = contadorId++;
         this.titulo = titulo;
         this.descricao = descricao;
+        this.prioridade = Prioridade.Baixa;
         this.concluida = false;
     }
 
