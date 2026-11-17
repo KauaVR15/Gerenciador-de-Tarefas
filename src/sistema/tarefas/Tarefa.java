@@ -54,6 +54,14 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
+    public Prioridade getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(Prioridade prioridade) {
+        this.prioridade = prioridade;
+    }
+
     public void marcarComoConcluida(){
         this.concluida = true;
     }
