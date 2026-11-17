@@ -16,6 +16,11 @@ import java.util.ArrayList;
 public class GerenciadorTarefa {
 
     private List<Tarefa> tarefas = new ArrayList<>();
+    private static final String ARQUIVO_CSV = "tarefas.csv";
+
+    public GerenciadorTarefa() {
+        carregarCsv();
+    }
 
     public void adicionarTarefa(String titulo, String descricao){
         if(titulo == null || titulo.isBlank()){
